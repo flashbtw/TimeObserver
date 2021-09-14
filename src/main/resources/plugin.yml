@@ -1,0 +1,5 @@
+name: TimeObserver
+version: ${project.version}
+main: de.flashyboi.gammellounge.timeobserver.TimeObserver
+api-version: 1.17
+authors: [ flash_btw ]
