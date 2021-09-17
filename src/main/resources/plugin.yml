@@ -3,3 +3,8 @@ version: ${project.version}
 main: de.flashyboi.gammellounge.timeobserver.TimeObserver
 api-version: 1.17
 authors: [ flash_btw ]
+commands:
+  datafolder:
+    description: gets the data folder from the plugin
+    usage: /datafolder
+    permission: timeobserver.datafolder

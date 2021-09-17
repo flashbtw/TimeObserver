@@ -1,12 +1,8 @@
 package de.flashyboi.gammellounge.timeobserver;
 
+import de.flashyboi.gammellounge.timeobserver.Commands.CommandGetFolder;
 import de.flashyboi.gammellounge.timeobserver.events.PlayerJoin;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
 
 public final class TimeObserver extends JavaPlugin {
 
@@ -15,7 +11,7 @@ public final class TimeObserver extends JavaPlugin {
         // Plugin startup logic
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
         getServer().getConsoleSender().sendMessage("Plugin Enabled!");
-        File dataFolder = getDataFolder();
+        this.getCommand("datafolder").setExecutor(new CommandGetFolder());
     }
 
     @Override
