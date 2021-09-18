@@ -17,7 +17,7 @@ public final class TimeObserver extends JavaPlugin {
         getServer().getConsoleSender().sendMessage("Plugin Enabled!");
         this.getCommand("datafolder").setExecutor(new CommandGetFolder());
         DirCreator main = new DirCreator(new File("mainDir"),"");
-        DirCreator logs = new DirCreator(new File("logDir"),"/logs")
+        DirCreator logs = new DirCreator(new File("logDir"),"/logs");
     }
 
     @Override
