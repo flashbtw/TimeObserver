@@ -10,5 +10,4 @@ public class DataFolder {
     public File getDatafolder() {
         return this.datafolder;
     }
-
 }
