@@ -7,7 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class Log {
+/*public class Log {
     public void printToFile(String message) {
         try {
             File saveTo = new File(Bukkit.getServer().getPluginManager().getPlugin("TimeObserver").getDataFolder(),"activity.log");
@@ -30,3 +30,4 @@ public class Log {
         }
     }
 }
+*/

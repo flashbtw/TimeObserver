@@ -6,5 +6,5 @@ authors: [ flash_btw ]
 commands:
   datafolder:
     description: gets the data folder from the plugin
-    usage: /datafolder
+    usage: You don't need any arguments. Just type /datafolder
     permission: timeobserver.datafolder
