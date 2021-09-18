@@ -10,7 +10,7 @@ public class PlayerLeave implements Listener {
     public void onPlayerLeave(PlayerQuitEvent ev) {
         Player player = ev.getPlayer();
         if(player.hasPermission("timeobserver.observed")) {
-            
+
         }
     }
 }
