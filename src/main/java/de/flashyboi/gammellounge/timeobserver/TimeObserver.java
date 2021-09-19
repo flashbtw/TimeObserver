@@ -4,6 +4,7 @@ import de.flashyboi.gammellounge.timeobserver.config.DirCreator;
 import de.flashyboi.gammellounge.timeobserver.config.FileCreator;
 import de.flashyboi.gammellounge.timeobserver.Commands.CommandGetFolder;
 import de.flashyboi.gammellounge.timeobserver.events.PlayerJoin;
+import de.flashyboi.gammellounge.timeobserver.events.PlayerLeave;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
@@ -14,10 +15,11 @@ public final class TimeObserver extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
-        getServer().getConsoleSender().sendMessage("Plugin Enabled!");
+        getServer().getPluginManager().registerEvents(new PlayerLeave(), this);
         this.getCommand("datafolder").setExecutor(new CommandGetFolder());
         DirCreator main = new DirCreator(new File("mainDir"),"");
-        DirCreator logs = new DirCreator(new File("logDir"),"/logs");
+        getServer().getConsoleSender().sendMessage("Plugin Enabled!");
+
     }
 
     @Override
