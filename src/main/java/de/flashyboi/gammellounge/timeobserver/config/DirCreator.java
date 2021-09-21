@@ -4,13 +4,13 @@ import org.bukkit.Bukkit;
 import java.io.File;
 
 public class DirCreator {
-    public File dirfile;
+    public File dirname;
     public String dirpath;
     public DirCreator(File dirfile, String dirpath) {
         this.dirpath = dirpath;
-        this.dirfile = new File(Bukkit.getServer().getPluginManager().getPlugin("TimeObserver").getDataFolder(),this.dirpath);
-        if(!this.dirfile.exists()) {
-            this.dirfile.mkdir();
+        this.dirname = new File(Bukkit.getServer().getPluginManager().getPlugin("TimeObserver").getDataFolder(),this.dirpath);
+        if(!this.dirname.exists()) {
+            this.dirname.mkdir();
         }
     }
     public String getDirpath() {

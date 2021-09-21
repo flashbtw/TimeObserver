@@ -5,20 +5,20 @@ import java.io.File;
 import java.io.IOException;
 
 public class FileCreator {
-    public File filef;
+    public File filename;
     public String filepath;
 
     public FileCreator(File filef, String filepath) {
         this.filepath = filepath;
-        this.filef = new File(Bukkit.getServer().getPluginManager().getPlugin("TimeObserver").getDataFolder(),this.filepath);
-        if(!this.filef.exists()) {
+        this.filename = new File(Bukkit.getServer().getPluginManager().getPlugin("TimeObserver").getDataFolder(),this.filepath);
+        if(!this.filename.exists()) {
             try {
-                this.filef.createNewFile();
+                this.filename.createNewFile();
             } catch (IOException e) { }
         }
     }
     public File getPath() {
-        return this.filef;
+        return this.filename;
     }
 
 /*    public void fileChecker() {
