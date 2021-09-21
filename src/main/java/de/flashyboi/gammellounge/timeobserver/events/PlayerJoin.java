@@ -15,7 +15,7 @@ public class PlayerJoin implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent ev){
         Player player = ev.getPlayer();
-        String playername = ev.getPlayer().getName();
+        String playername = player.getName();
         if(!player.hasPermission("TimeObserver.observed")) {
             return;
         } else {
